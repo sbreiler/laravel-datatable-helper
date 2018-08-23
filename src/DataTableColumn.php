@@ -24,6 +24,67 @@ class DataTableColumn extends \Yajra\DataTables\Html\Column {
     }
 
     /**
+     * @param $data
+     * @return $this
+     */
+    public function setData($data) {
+        $this->offsetSet('data', $data);
+
+        return $this;
+    }
+
+    /**
+     * @param $title
+     * @return $this
+     */
+    public function setTitle($title) {
+        $this->offsetSet('title', $title);
+
+        return $this;
+    }
+
+    /**
+     * @param $js_function
+     * @return $this
+     */
+    public function setClientRender($js_function) {
+        $this->offsetSet('render', $js_function);
+
+        return $this;
+    }
+
+    /**
+     * @param bool $to
+     * @return $this
+     */
+    public function setSearchable($to = true) {
+        $this->offsetSet('searchable', $to);
+
+        return $this;
+    }
+
+    /**
+     * @param bool $to
+     * @return $this
+     */
+    public function setSortable($to = true) {
+        $this->offsetSet('sortable', $to);
+
+        return $this;
+    }
+
+    /**
+     * @param bool $to
+     * @return $this
+     */
+    public function setPrintable($to = true) {
+        $this->offsetSet('printable', $to);
+
+        return $this;
+    }
+
+
+    /**
      * @param callable $function
      * @return $this
      */
