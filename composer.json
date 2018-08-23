@@ -1,0 +1,25 @@
+{
+  "name": "sbreiler/laravel-datatable-helper",
+  "description": "Helper classes",
+  "keywords": [
+    "laravel",
+    "dataTables"
+  ],
+  "authors": [
+    {
+      "name": "Steffen Breiler",
+      "email": "steffen@bt-server.de"
+    }
+  ],
+  "require": {
+    "php": ">=7.0",
+    "yajra/laravel-datatables-oracle": "^8.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "sbreiler\\DataTables\\": "src/"
+    },
+    "files": [
+    ]
+  }
+}
