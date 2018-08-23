@@ -45,7 +45,6 @@ class DataTableController extends \Yajra\DataTables\Html\Builder {
             $dataTable->rawColumns($raw_columns);
         }
 
-        return $dataTable
-            ->make(true);
+        return $dataTable;
     }
 }
