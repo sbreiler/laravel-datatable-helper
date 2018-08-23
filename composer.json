@@ -18,8 +18,6 @@
   "autoload": {
     "psr-4": {
       "sbreiler\\DataTables\\": "src/"
-    },
-    "files": [
-    ]
+    }
   }
 }
