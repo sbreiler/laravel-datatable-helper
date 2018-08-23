@@ -88,7 +88,7 @@ class DataTableColumn extends \Yajra\DataTables\Html\Column {
      * @param callable $function
      * @return $this
      */
-    function setFilter(callable $function) {
+    public function setFilter(callable $function) {
         $this->filterFunc = $function;
 
         return $this;
@@ -97,7 +97,7 @@ class DataTableColumn extends \Yajra\DataTables\Html\Column {
     /**
      * @return $this
      */
-    function disableFilter() {
+    public function disableFilter() {
         $this->filterFunc = function() {};
 
         return $this;
@@ -106,7 +106,7 @@ class DataTableColumn extends \Yajra\DataTables\Html\Column {
     /**
      * @return null|callable
      */
-    function getFilter() {
+    public function getFilter() {
         return $this->filterFunc;
     }
 
@@ -115,7 +115,7 @@ class DataTableColumn extends \Yajra\DataTables\Html\Column {
      * @param bool $isRaw
      * @return $this
      */
-    function setServerRender(callable $function, $isRaw = false) {
+    public function setServerRender(callable $function, $isRaw = false) {
         $this->serverRenderFunc = $function;
         $this->setRenderRaw($isRaw);
 
@@ -125,7 +125,7 @@ class DataTableColumn extends \Yajra\DataTables\Html\Column {
     /**
      * @return null|callable
      */
-    function getServerRender() {
+    public function getServerRender() {
         return $this->serverRenderFunc;
     }
 
@@ -134,7 +134,7 @@ class DataTableColumn extends \Yajra\DataTables\Html\Column {
      * @param bool $to
      * @return $this
      */
-    function setRenderRaw(bool $to) {
+    public function setRenderRaw(bool $to) {
         $this->serverRenderRaw = $to;
 
         return $this;
@@ -143,7 +143,7 @@ class DataTableColumn extends \Yajra\DataTables\Html\Column {
     /**
      * @return $this
      */
-    function disableRaw() {
+    public function disableRaw() {
         $this->serverRenderRaw = false;
 
         return $this;
@@ -152,7 +152,7 @@ class DataTableColumn extends \Yajra\DataTables\Html\Column {
     /**
      * @return bool
      */
-    function isRaw() {
+    public function isRaw() {
         return $this->serverRenderRaw;
     }
 
@@ -160,7 +160,7 @@ class DataTableColumn extends \Yajra\DataTables\Html\Column {
      * @param bool $to
      * @return $this
      */
-    function setVirtualColumn($to = true) {
+    public function setVirtualColumn($to = true) {
         $this->isVirtualColumn = $to;
 
         return $this;
@@ -169,7 +169,7 @@ class DataTableColumn extends \Yajra\DataTables\Html\Column {
     /**
      * @return bool
      */
-    function isVirtualColumn() {
+    public function isVirtualColumn() {
         return $this->isVirtualColumn;
     }
 }

@@ -3,6 +3,21 @@
 namespace sbreiler\DataTables;
 
 class DataTableController extends \Yajra\DataTables\Html\Builder {
+    protected $filterFunc = null; // global filter!
+
+    public function setFilter(callable $function) {
+        $this->filterFunc = $function;
+
+        return $this;
+    }
+
+    /**
+     * @return null|callable
+     */
+    public function getFilter() {
+        return $this->filterFunc;
+    }
+
     /**
      * @param \Yajra\DataTables\EloquentDataTable $dataTable
      * @return \Illuminate\Http\JsonResponse
@@ -44,6 +59,13 @@ class DataTableController extends \Yajra\DataTables\Html\Builder {
         if( count($raw_columns) > 0 ) {
             $dataTable->rawColumns($raw_columns);
         }
+
+        if( null !== $this->getFilter() ) {
+            $dataTable->filter(
+                $this->getFilter()
+            );
+        }
+
 
         return $dataTable;
     }
