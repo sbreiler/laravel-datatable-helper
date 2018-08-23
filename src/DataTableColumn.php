@@ -1,5 +1,7 @@
 <?php
 
+namespace sbreiler\DataTables;
+
 class DataTableColumn extends \Yajra\DataTables\Html\Column {
     protected $filterFunc = null;
     protected $serverRenderFunc = null;
@@ -97,7 +99,7 @@ class DataTableColumn extends \Yajra\DataTables\Html\Column {
      * @param bool $to
      * @return $this
      */
-    function setVirtualColumn(bool $to = true) {
+    function setVirtualColumn($to = true) {
         $this->isVirtualColumn = $to;
 
         return $this;

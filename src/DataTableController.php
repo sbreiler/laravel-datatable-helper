@@ -1,5 +1,7 @@
 <?php
 
+namespace sbreiler\DataTables;
+
 class DataTableController extends \Yajra\DataTables\Html\Builder {
     /**
      * @param \Yajra\DataTables\EloquentDataTable $dataTable
